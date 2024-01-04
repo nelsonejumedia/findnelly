@@ -1,9 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Montserrat:wght@500&family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    
+    <title>Find Nelly</title>
 </head>
-<body style="background-color:whitesmoke;">
-  <h1 style="color:red; font-size:5rem; margin:auto;">Refresh Browser to try again</h1>
-<script src="index.js"></script>
+<body>
+    <div class="header-container">
+        <img src="nelly.png" alt="Game Logo" width="100px">
+        <h1>Find Nelly</h1>
+    </div>
+    
+    <!--<audio id="backgroundMusic" src="background_music.mp3" loop autoplay></audio>-->
+    <audio id="chimeSound" src="chime.mp3"></audio>
+    <audio id="buzzerSound" src="buzzer.mp3"></audio>
+     
+    <div class="container">
+        <div id="level">Level: 1</div>
+        <div class="grid" id="grid"></div>
+        <div id="score">Score: <span id="points">0</span></div>
+    </div>
+    
+    
+     <div class="overlay" id="gameOverOverlay">
+        <div class="overlay-content">
+            <h2>Game Over!</h2>
+            <p>Restarting the current level...</p>
+        </div>
+    </div>
+
+    <div class="overlay" id="levelCompleteOverlay">
+        <div class="overlay-content">
+            <h2>Level Completed!</h2>
+            <p>Moving to the next level...</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
